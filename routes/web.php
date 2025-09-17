@@ -1,11 +1,14 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ReceitaController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect()->route('receitas.index');
 });
+
+Route::resource('receitas', ReceitaController::class);
 
 Route::get('/dashboard', function () {
     return view('dashboard');
