@@ -1,13 +1,18 @@
 @extends('layouts.app')
 
-@section('content')
-<h1>Receitas</h1>
-@foreach ($receitas as $receita)
-    <div>
-        <h2>{{ $receita->titulo }}</h2>
-        <p>{{ $receita->descricao }}</p>
-        <img src="{{ asset('storage/'.$receita->arquivo) }}" width="200">
-        <a href="{{ route('receitas.show', $receita) }}">Ver mais</a>
+<div class="container">
+    @section('content')
+    <h1>Receitas</h1>
+    @foreach ($receitas as $receita)
+    <div class="card">
+        <header class="card-header">
+            <h2>{{ $receita->titulo }}</h2>
+        </header>
+        <div class="card-body">
+            <p>{{ $receita->descricao }}</p> 
+            <img src="{{ asset('storage/'.$receita->arquivo) }}" width="200">
+            <a href="{{ route('receitas.show', $receita) }}">Ver mais</a>
+        </div>
         @can('update', $receita)
             <a href="{{ route('receitas.edit', $receita) }}">Editar</a>
         @endcan
@@ -18,6 +23,7 @@
             </form>
         @endcan
     </div>
+</div>
 @endforeach
 {{ $receitas->links() }}
 @endsection
