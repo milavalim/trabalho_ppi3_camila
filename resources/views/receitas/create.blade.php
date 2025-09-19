@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container">
-    <h1>Criar Receita</h1>
+    <h1 style="color: #d15895;">Criar Receita</h1>
 
     <form action="{{ route('receitas.store') }}" method="POST" enctype="multipart/form-data">
         @csrf

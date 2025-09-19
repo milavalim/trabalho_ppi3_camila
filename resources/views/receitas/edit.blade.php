@@ -2,8 +2,8 @@
 
 @section('content')
 <div class="container">
-    <h1>Editar Receita</h1>
-    
+    <h1 style="color: #d15895;">Editar Receita</h1>
+
     <form action="{{ route('receitas.update', $receita->id) }}" method="POST" enctype="multipart/form-data">
         @csrf
         @method('PUT')

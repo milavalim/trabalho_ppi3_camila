@@ -6,8 +6,13 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 </head>
+<style>
+    .navbar{
+        background-color: #ff9ccd;
+    }
+</style>
 <body class="bg-gray-100">
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4 p-3 justify-content-center">
+<nav class="navbar navbar-expand-lg mb-4 p-3 justify-content-center">
     <a class="nav-link text-light me-4" href="{{ route('receitas.index') }}">Home</a>
     @auth
         <a class="nav-link text-light me-4" href="{{ route('receitas.create') }}">Nova Receita</a>
