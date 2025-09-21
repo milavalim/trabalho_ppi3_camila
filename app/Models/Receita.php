@@ -7,10 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Receita extends Model
 {
-    use HasFactory;
+    use HasFactory; //gerar dados fake
 
     // Libera os campos que podem ser salvos via create() ou update()
-    protected $fillable = [
+    protected $fillable = [ //diz quais colunas podem ser atribuídas em massa
         'titulo',
         'ingredientes',
         'descricao',

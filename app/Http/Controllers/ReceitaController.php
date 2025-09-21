@@ -31,6 +31,7 @@ class ReceitaController extends Controller
     {
         $request->validate([
             'titulo' => 'required|min:3',
+            'ingredientes' => 'required|min:5',
             'descricao' => 'required|min:10',
             'arquivo' => 'required|file|mimes:jpg,png,mp4|max:2048',
         ]);
@@ -39,6 +40,7 @@ class ReceitaController extends Controller
 
         Receita::create([
             'titulo' => $request->titulo,
+            'ingredientes' => $request->ingredientes,
             'descricao' => $request->descricao,
             'arquivo' => $path,
             'user_id' => Auth::id(),
@@ -64,6 +66,7 @@ class ReceitaController extends Controller
 
         $request->validate([
             'titulo' => 'required|min:3',
+            'ingredientes' => 'required|min:5',
             'descricao' => 'required|min:10',
             'arquivo' => 'nullable|file|mimes:jpg,png,mp4|max:2048',
         ]);
@@ -73,7 +76,7 @@ class ReceitaController extends Controller
             $receita->arquivo = $path;
         }
 
-        $receita->update($request->only('titulo', 'descricao'));
+        $receita->update($request->only('titulo', 'ingredientes', 'descricao'));
         return redirect()->route('receitas.index');
     }
 
