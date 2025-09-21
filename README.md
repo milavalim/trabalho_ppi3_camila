@@ -1,4 +1,5 @@
 <p align="center"><a href="https://www.gravatai.ifsul.edu.br/" target="_blank"><img src="https://congressoti.passofundo.ifsul.edu.br/assets/img/logo.png" width="400" alt="IFSul Logo"></a></p>
+<p align=center>Programação para Internet 3 | Camila Valim Dias</p>
 
 ## Descrição do Projeto
 
