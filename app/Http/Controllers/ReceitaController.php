@@ -82,8 +82,14 @@ class ReceitaController extends Controller
 
     public function destroy(Receita $receita)
     {
-        $this->authorize('delete', $receita);
+        //vê se o usuário pode deletar
+        $this->authorize('delete-receita', $receita);
+
+        // deleta a receita
         $receita->delete();
-        return redirect()->route('receitas.index');
+
+        // redireciona de volta para a lista
+        return redirect()->route('receitas.index')
+                        ->with('success', 'Receita deletada com sucesso!');
     }
 }
