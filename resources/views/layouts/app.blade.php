@@ -16,7 +16,9 @@
     <a class="nav-link text-light me-4" href="{{ route('receitas.index') }}">Home</a>
     @auth
         <a class="nav-link text-light me-4" href="{{ route('receitas.create') }}">Nova Receita</a>
-        <form action="/logout" method="POST">@csrf<button type="submit">Sair</button></form>
+        <form action="/logout" method="POST">
+            @csrf<button class="nav-link text-light me-4 mt-3" type="submit">Sair</button>
+        </form>
     @else
         <a class="nav-link text-light me-4" href="/login">Entrar</a>
         <a class="nav-link text-light me-4" href="/register">Cadastrar</a>

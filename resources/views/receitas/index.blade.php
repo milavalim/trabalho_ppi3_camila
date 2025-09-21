@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+<div class="container mb-5">
     <h1>Receitas</h1>
     <div class="row">
         @foreach ($receitas as $receita)
@@ -18,12 +18,12 @@
                 @can('update', $receita)
                     <a href="{{ route('receitas.edit', $receita) }}" class="btn btn-outline-secondary mt-2">Editar</a>
                 @endcan
-                @can('delete', $receita)
+                {{-- @can('delete', $receita)
                     <form action="{{ route('receitas.destroy', $receita) }}" method="POST">
                         @csrf @method('DELETE')
                         <button class="btn btn-outline-danger mt-2">Excluir</button>
                     </form>
-                @endcan
+                @endcan --}}
             </div>
         </div>
         @endforeach

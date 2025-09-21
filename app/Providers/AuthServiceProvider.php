@@ -24,7 +24,7 @@ class AuthServiceProvider extends ServiceProvider
     {
         $this->registerPolicies();
 
-        // Gate para permitir que o usuário 1 delete qualquer receita
+        // gate para permitir que o usuário 1 delete qualquer receita
         Gate::define('delete-receita', function ($user, $receita) {
             return $user->id === 1;
         });
