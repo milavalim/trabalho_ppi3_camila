@@ -15,9 +15,9 @@
                     <img src="{{ asset('storage/'.$receita->arquivo) }}" width="200">
                     <a href="{{ route('receitas.show', $receita) }}" class="btn btn-outline-dark mt-2">Detalhes</a>
                 </div>
-                @can('update', $receita)
+                {{-- @can('update', $receita)
                     <a href="{{ route('receitas.edit', $receita) }}" class="btn btn-outline-secondary mt-2">Editar</a>
-                @endcan
+                @endcan --}}
                 {{-- @can('delete', $receita)
                     <form action="{{ route('receitas.destroy', $receita) }}" method="POST">
                         @csrf @method('DELETE')
