@@ -59,7 +59,7 @@ Trabalho_ppi3_camila_/
 ## Configuração do ambiente
 
 ### Instale as dependências que faltam
-composer install
+composer install (pasta vendor)
 
 npm install
 
