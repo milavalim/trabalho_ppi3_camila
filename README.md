@@ -23,32 +23,51 @@ Funcionalidades principais:
 ## Estrutura
 
 Trabalho_ppi3_camila_/
+
 │
+
 ├── app/                # Código Laravel
+
 ├── bootstrap/
+
 ├── config/
+
 ├── database/
+
 │   ├── migrations/     # Criação de tabelas
+
 │   └── seeders/        # Dados de exemplo
+
 ├── public/
+
 ├── resources/
+
 │   ├── views/          # Blade templates
+
 │   └── css/            # CSS customizado
+
 ├── routes/
+
 ├── .env.example        # Variáveis de ambiente
+
 ├── composer.json
+
 ├── package.json
+
 └── README.md
 
 ## Configuração do ambiente
 
 ### Instale as dependências que faltam
 composer install
+
 npm install
+
 npm run build
 
 ### Importe o banco
 No painel do Xampp > Admin > Importar 
+
 Escolha o arquivo .sql do zip e importe o banco de dados. 
 
 ## Funcionalidades
