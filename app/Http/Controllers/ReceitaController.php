@@ -15,7 +15,7 @@ class ReceitaController extends Controller
 
     public function index()
     {
-        $receitas = Receita::paginate(5);
+        $receitas = Receita::paginate(3);
         return view('receitas.index', compact('receitas'));
     }
 

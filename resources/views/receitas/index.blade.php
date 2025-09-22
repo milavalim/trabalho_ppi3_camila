@@ -28,6 +28,7 @@
         </div>
         @endforeach
     </div>
+    {{ $receitas->links() }} 
+    {{-- esse código de cima é o recurso de paginação --}}
 </div>
-{{ $receitas->links() }}
 @endsection
