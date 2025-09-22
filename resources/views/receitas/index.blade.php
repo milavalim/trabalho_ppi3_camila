@@ -28,7 +28,9 @@
         </div>
         @endforeach
     </div>
-    {{ $receitas->links() }} 
-    {{-- esse código de cima é o recurso de paginação --}}
+    <div class="d-flex justify-content-center mt-4">
+        {{ $receitas->links() }} 
+        {{-- esse código de cima é o recurso de paginação --}}
+    </div>
 </div>
 @endsection
